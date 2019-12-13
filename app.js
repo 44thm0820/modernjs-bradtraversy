@@ -11,10 +11,16 @@ const listItems = document.querySelector('ul').getElementsByClassName('collectio
 console.log(listItems);
 
 // document.getElementsByTagName - notice identical to results above but by using getElementsbyTagName
-const lis = document.getElementsByTagName('li');
+let lis = document.getElementsByTagName('li');
 console.log(lis);
 console.log(lis[0]);
 lis[0].style.color = 'red';
 lis[3].textContent = 'Hello';
 //get element only by tag
 
+// Convert HTML collection into array
+lis = Array.from(lis);
+
+lis.reverse();
+
+console.log(lis);
