@@ -43,5 +43,13 @@ liOdd.forEach(function(li, index){
   li.style.background = '#ccc'; //set odd rows to dark grey background
 });
 
+liEven.forEach(function(li, index){
+  li.style.background = '#f4f4f4'; //set even rows to light grey background
+});
+
+//alternatively you can use a for loop to achieve the same result
+for (let i = 0;  i < liEven.length; i++) {
+  liEven[i].style.background = '#f4f4f4'; //set even rows to light grey background
+}
 
 console.log(items);
