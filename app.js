@@ -33,3 +33,6 @@ document.querySelector('ul li').style.color = 'blue'; // equivalent to line of c
 document.querySelector('li:last-child').style.color = 'red';
 document.querySelector('li:nth-child(3)').style.color = 'yellow';
 document.querySelector('li:nth-child(4)').textContent = 'Hello World';
+// you can also select oddth or eventh child
+document.querySelector('li:nth-child(odd)').style.background = '#ccc'; //selects only first oddth child
+
