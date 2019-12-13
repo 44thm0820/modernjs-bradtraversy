@@ -20,3 +20,16 @@ taskTitle.style.padding = '5px';
 taskTitle.textContent = 'Task List';
 taskTitle.innerText = 'My Tasks';
 taskTitle.innerHTML = '<span style="color:red">Task List</span>';
+
+//document.querySelector()
+// it is powerful and works just like jQuery
+console.log(document.querySelector('#task-title'));
+console.log(document.querySelector('.card-title'));
+console.log(document.querySelector('h5'));
+
+document.querySelector('li').style.color = 'red';
+document.querySelector('ul li').style.color = 'blue'; // equivalent to line of code above
+
+document.querySelector('li:last-child').style.color = 'red';
+document.querySelector('li:nth-child(3)').style.color = 'yellow';
+document.querySelector('li:nth-child(4)').textContent = 'Hello World';
