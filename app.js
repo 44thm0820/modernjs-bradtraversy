@@ -126,8 +126,20 @@ val = window.outerWidth;
 val = window.innerHeight;
 val = window.innerWidth;
 
-// Scroll points
+// Scroll points - good for sites where you scroll down and you have the animations happen as you scroll down so you know where you are and when to show the animations
 val = window.scrollY; // vertical scroll
 val = window.scrollX; // horizontal scroll
+
+//location object and history object
+
+//location object
+val = window.location;
+val = window.location.hostname; //it'll show the domain name if you're on one
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+window.location.href =  'http://google.com'
 
 console.log(val);
