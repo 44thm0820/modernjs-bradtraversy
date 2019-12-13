@@ -1,40 +1,20 @@
-let val;
+// document.getElementById()
 
-val = document;
-val = document.all; // gives you html collection
-val = document.all[2];
-val = document.all.length; // shows you 43 elements in the dom
-val = document.head;
-val = document.body;
-val = document.doctype;
-val = document.domain;
-val = document.URL;
-val = document.characterSet;
-val = document.contentType;
+console.log(document.getElementById('task-title'));
 
-val = document.forms;
-val = document.forms[0];
-val = document.forms[0].id;
-val = document.forms[0].method;
-val = document.forms[0].action;
+// Get things from the element
 
-val = document.links;
-val = document.links[0];
-val = document.links[0].id;
-val = document.links[0].className;
-val = document.links[0].classList[0];
+console.log(document.getElementById('task-title').id);
+console.log(document.getElementById('task-title').className);
 
-val = document.images;
+// Change styling - normally you would use CSS ... but you can use JavaScript - get away from using jQuery
+document.getElementById('task-title').style.background = '#333';
+document.getElementById('task-title').style.color = '#fff';
+document.getElementById('task-title').style.padding = '5px';
+// document.getElementById('task-title').style.display = 'none';
 
-val = document.scripts;
-val = document.scripts[2].getAttribute('src');
 
-let scripts = document.scripts;
-
-let scriptsArr = Array.from(scripts); // necessary for forEach!!!
-
-scriptsArr.forEach(function(script) {
-  console.log(script);
-})
-
-console.log(val);
+// Change content
+document.getElementById('task-title').textContent = 'Task List';
+document.getElementById('task-title').innerText = 'My Tasks';
+document.getElementById('task-title').innerHTML = '<span style="color:red">Task List</span>';
