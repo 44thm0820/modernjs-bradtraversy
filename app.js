@@ -140,6 +140,25 @@ val = window.location.href;
 val = window.location.search;
 
 // Redirect
-window.location.href =  'http://google.com'
+// window.location.href =  'http://google.com'
+
+//Reload
+// window.location.reload(); // you would normally use it inside a function, not call it in the window global scope
+
+// History Object
+
+// window.history.go(-2);
+// val = window.history.length;
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+
 
 console.log(val);
