@@ -23,4 +23,10 @@ lis = Array.from(lis);
 
 lis.reverse();
 
+lis.forEach(function(li){
+  console.log(li.className);
+  li.textContent = 'Hello';
+})
+
+
 console.log(lis);
