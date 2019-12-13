@@ -22,7 +22,7 @@ val = document.links;
 val = document.links[0];
 val = document.links[0].id;
 val = document.links[0].className;
-val = document.links[0].classList;
+val = document.links[0].classList[0];
 
 
 console.log(val);
