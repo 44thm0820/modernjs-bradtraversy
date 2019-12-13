@@ -26,5 +26,7 @@ val = document.links[0].classList[0];
 
 val = document.images;
 
+val = document.scripts;
+val = document.scripts[2].getAttribute('src');
 
 console.log(val);
