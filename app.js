@@ -23,10 +23,10 @@ lis = Array.from(lis);
 
 lis.reverse();
 
-lis.forEach(function(li){
+lis.forEach(function(li, index){
   console.log(li.className);
-  li.textContent = 'Hello';
-})
+  li.textContent = `${index}: Hello`;
+});
 
 
 console.log(lis);
