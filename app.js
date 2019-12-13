@@ -127,6 +127,7 @@ val = window.innerHeight;
 val = window.innerWidth;
 
 // Scroll points
-val = window.scrollY;
+val = window.scrollY; // vertical scroll
+val = window.scrollX; // horizontal scroll
 
 console.log(val);
