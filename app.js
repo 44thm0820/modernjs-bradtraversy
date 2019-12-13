@@ -1,38 +1,20 @@
-// document.getElementById()
+// document.getElementsByClassName
 
-console.log(document.getElementById('task-title'));
+const items = document.getElementsByClassName('collection-item');
+console.log(items);
+console.log(items[0]);
+items[0].style.color = 'red'; // get element by class
+items[3].textContent = 'Hello';
 
-// Get things from the element
+const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+//get element by tag then class
+console.log(listItems);
 
-console.log(document.getElementById('task-title').id);
-console.log(document.getElementById('task-title').className);
-
-const taskTitle = document.getElementById('task-title');
-
-// Change styling - normally you would use CSS ... but you can use JavaScript - get away from using jQuery
-taskTitle.style.background = '#333';
-taskTitle.style.color = '#fff';
-taskTitle.style.padding = '5px';
-// document.getElementById('task-title').style.display = 'none';
-
-
-// Change content
-taskTitle.textContent = 'Task List';
-taskTitle.innerText = 'My Tasks';
-taskTitle.innerHTML = '<span style="color:red">Task List</span>';
-
-//document.querySelector()
-// it is powerful and works just like jQuery
-console.log(document.querySelector('#task-title'));
-console.log(document.querySelector('.card-title'));
-console.log(document.querySelector('h5'));
-
-document.querySelector('li').style.color = 'red';
-document.querySelector('ul li').style.color = 'blue'; // equivalent to line of code above
-
-document.querySelector('li:last-child').style.color = 'red';
-document.querySelector('li:nth-child(3)').style.color = 'yellow';
-document.querySelector('li:nth-child(4)').textContent = 'Hello World';
-// you can also select oddth or eventh child
-document.querySelector('li:nth-child(odd)').style.background = '#ccc'; //selects only first oddth child
+// document.getElementsByTagName - notice identical to results above but by using getElementsbyTagName
+const lis = document.getElementsByTagName('li');
+console.log(lis);
+console.log(lis[0]);
+lis[0].style.color = 'red';
+lis[3].textContent = 'Hello';
+//get element only by tag
 
