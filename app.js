@@ -1,55 +1,63 @@
-// // document.getElementsByClassName
+let val;
 
-// const items = document.getElementsByClassName('collection-item');
-// console.log(items);
-// console.log(items[0]);
-// items[0].style.color = 'red'; // get element by class
-// items[3].textContent = 'Hello';
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
 
-// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
-// //get element by tag then class
-// console.log(listItems);
+val = listItem;
+val = list;
 
-// // document.getElementsByTagName - notice identical to results above but by using getElementsbyTagName
-// let lis = document.getElementsByTagName('li');
-// console.log(lis);
-// console.log(lis[0]);
-// lis[0].style.color = 'red';
-// lis[3].textContent = 'Hello';
-// //get element only by tag
+//Get child nodes - returns a Nodelist that may contain text nodes - not good result
+val = list.childNodes;
+// val = list.childNodes[0].nodeName; // console gives us #text
+// val = list.childNodes[0].nodeType; // console gives us the number 3 - why?
+// val = list.childNodes[1].nodeType; // console gives us the number 1 - why?
+val = list.childNodes[3].nodeType; // console gives us the number 8 - why?
 
-// // Convert HTML collection into array
-// lis = Array.from(lis);
+//nodeType is a numerical code that refers to the type of node as the legend shows below:
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
 
-// lis.reverse();
 
-// lis.forEach(function(li, index){
-//   console.log(li.className);
-//   li.textContent = `${index}: Hello`;
-// });
 
-// console.log(lis);
+// Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = 'Hello';
+// Children of children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
 
-//document.querySelectorAll
-const items = document.querySelectorAll('ul.collection li.collection-item');
-items.forEach(function(item, index){
-  item.textContent = `${index}: Hello`;
-});
+// First child
+val = list.firstChild; // gives us the first node of a nodeList
+val = list.firstElementChild // gives us the first element of the HTMLCollection, not giving us any text nodes
 
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
+// Last child
+val = list.lastChild; // gives us the last node of a nodeList
+val = list.lastElementChild // gives us the last element of the HTMLCollection, not giving us any text nodes
 
-liOdd.forEach(function(li, index){
-  li.style.background = '#ccc'; //set odd rows to dark grey background
-});
+// Count child elements
+val = list.childElementCount; // gives us 5, the length of the HTML collection of the children
 
-liEven.forEach(function(li, index){
-  li.style.background = '#f4f4f4'; //set even rows to light grey background
-});
+// Get parent node
+val = listItem.parentNode;  //gives ul - which is a member of a nodeList
+val = listItem.parentElement; // gives ul - which is a member of HTML collection
+// Get parents of parents
+val = listItem.parentElement.parentElement // gives div class of card-action
 
-//alternatively you can use a for loop to achieve the same result
-for (let i = 0;  i < liEven.length; i++) {
-  liEven[i].style.background = '#f4f4f4'; //set even rows to light grey background
-}
 
-console.log(items);
+// Get next sibling
+val = listItem.nextSibling; // gives us a textNode as this is part of a nodelist
+val = listItem.nextElementSibling; // gives us an element as this is part of an HTML Collection - what we want!
+val = listItem.nextElementSibling.nextElementSibling; //down 2
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling; // down 2 up 1, gives us li element containing the text 'Hello' - this is traversing the DOM!!!
+
+// Get previous sibling
+// val = listItem.previousSibling; // gives us a textNode as this is part of a nodelist
+// val = listItem.previousElementSibling; // null
+
+
+console.log(val);
