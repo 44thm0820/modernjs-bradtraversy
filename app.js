@@ -27,3 +27,17 @@ lis[0].remove();
 //Remove child element
 list.removeChild(lis[3]);
 
+// CLASSES & ATTR
+const firstLi = document.querySelector('li:first-child');
+// console.log(firstLi.children[0]);
+const link = firstLi.children[0]; //getting the a tag
+
+let val;
+
+val = link.className; //this gives you a string of all the classes, each separated by a single space
+val = link.classList; //this gives you an arrayLike domTokenList where you can access each element like an array
+val = link.classList[0];
+link.classList.add('test');
+val = link;
+console.log(val);
+
