@@ -38,6 +38,19 @@ val = link.className; //this gives you a string of all the classes, each separat
 val = link.classList; //this gives you an arrayLike domTokenList where you can access each element like an array
 val = link.classList[0];
 link.classList.add('test');
-val = link;
-console.log(val);
+link.classList.remove('test');
 
+val = link;
+// console.log(val);
+
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+val = link.hasAttribute('href');
+val = link.hasAttribute('title');
+val = link.removeAttribute('title');
+val = link;
+
+
+console.log(val);
