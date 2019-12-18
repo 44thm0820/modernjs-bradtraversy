@@ -22,6 +22,11 @@ function onClick(e) {
     length: 3
     value: "clear-tasks btn black"
     __proto__: DOMTokenList */
+  // e.target.innerText = 'Hello'; // changes button text to Hello
+
+  //Event type
+  val = e.type; //click
+  console.log(val);
 }
 //Now you can see the MouseEvent object in the console, with all its properties
 //most important property the target property.
