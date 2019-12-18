@@ -10,7 +10,18 @@ document.querySelector('.clear-tasks')
 function onClick(e) {
   let val;
   val = e;
-  console.log(val);
+  //Event target element
+  val = e.target; //<a href="#" class="clear-tasks btn black">Clear Tasks</a>
+  val = e.target.id;//blank as it does not have an id
+  val = e.target.className; //clear-tasks btn black
+  val = e.target.classList;
+    /* DOMTokenList(3) ["clear-tasks", "btn", "black", value: "clear-tasks btn black"]
+    0: "clear-tasks"
+    1: "btn"
+    2: "black"
+    length: 3
+    value: "clear-tasks btn black"
+    __proto__: DOMTokenList */
 }
 //Now you can see the MouseEvent object in the console, with all its properties
 //most important property the target property.
