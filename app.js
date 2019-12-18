@@ -26,6 +26,18 @@ function onClick(e) {
 
   //Event type
   val = e.type; //click
+
+  // Timestamp
+  val = e.timeStamp;
+
+  //Coordinates event relative to the window
+  val = e.clientY;
+  val = e.clientX;
+
+  //Coordinates event relative to the element
+  val = e.offsetY;
+  val = e.offsetX;
+
   console.log(val);
 }
 //Now you can see the MouseEvent object in the console, with all its properties
