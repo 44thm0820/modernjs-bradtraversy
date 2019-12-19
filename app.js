@@ -5,4 +5,6 @@ form.addEventListener('submit', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
+
+  e.preventDefault();
 }
