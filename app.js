@@ -18,12 +18,16 @@
 
 //EVENT DELEGATION
 
-const delItem = document.querySelector('.delete-item');
+// const delItem = document.querySelector('.delete-item');
 
-delItem.addEventListener('click', deleteItem);
+// delItem.addEventListener('click', deleteItem);
 
-function deleteItem() {
-  console.log('delete item');
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+  if (e.target.className === 'fa fa-remove') {
+    console.log('delete item');
+  }
 }
 //right now only the first list item console.logs delete item when you click it
 //event delegation needs to happen in order to allow each of the rest of the list items to console log delete item
