@@ -7,14 +7,21 @@ taskInput.value = '';
 
 // form.addEventListener('submit', runEvent);
 
-taskInput.addEventListener('keydown', runEvent);
+// Keydown
+// taskInput.addEventListener('keydown', runEvent);
+
+// Keyup
+// taskInput.addEventListener('keyup', runEvent);
+
+// Keypress
+task.addEventListener('keypress', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
 
-  console.log(e.target.value); //to capture each key as it is typed
+  // console.log(e.target.value); //to capture each key as it is typed
 
-  heading.innerText = e.target.value; //now the heading will include whatever i type.
+  // heading.innerText = e.target.value; //now the heading will include whatever i type.
 
   //Get input value
   // console.log(taskInput.value);
