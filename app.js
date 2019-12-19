@@ -17,8 +17,10 @@ taskInput.value = '';
 // task.addEventListener('keypress', runEvent);
 
 // focus - when you click inside of an input and you set it to the focus mode
-task.addEventListener('focus', runEvent);
+// task.addEventListener('focus', runEvent);
 
+//blur - opposite of focus
+task.addEventListener('blur', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
