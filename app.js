@@ -13,19 +13,22 @@ const heading = document.querySelector('h5');
 // //Mouseup
 // clearBtn.addEventListener('mouseup', runEvent);
 // //Mouseenter
-card.addEventListener('mouseenter', runEvent);
-// //Mouseleave
-card.addEventListener('mouseleave', runEvent);
-// //Mouseover
-card.addEventListener('mouseover', runEvent);
-// //Mouseout
-card.addEventListener('mouseout', runEvent);
+// card.addEventListener('mouseenter', runEvent);
+// // //Mouseleave
+// card.addEventListener('mouseleave', runEvent);
+// // //Mouseover
+// card.addEventListener('mouseover', runEvent);
+// // //Mouseout
+// card.addEventListener('mouseout', runEvent);
 
 //subtle difference with mouseover and mouseout... mouseenter and mouseleave only fire on the intitial parent element
 
-
+// Mousemove
+card.addEventListener('mousemove', runEvent);
+//mousemove good for games
 
 // Event Handler
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
 }
