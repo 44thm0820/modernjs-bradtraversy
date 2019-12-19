@@ -20,7 +20,11 @@ taskInput.value = '';
 // task.addEventListener('focus', runEvent);
 
 //blur - opposite of focus
-task.addEventListener('blur', runEvent);
+// task.addEventListener('blur', runEvent);
+
+//cut - fires event when user cuts text
+task.addEventListener('cut', runEvent);
+
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
