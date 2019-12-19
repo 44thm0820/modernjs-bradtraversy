@@ -22,8 +22,12 @@ taskInput.value = '';
 //blur - opposite of focus
 // task.addEventListener('blur', runEvent);
 
-//cut - fires event when user cuts text
-task.addEventListener('cut', runEvent);
+//cut - fires event when user cuts text or command-x
+// task.addEventListener('cut', runEvent);
+
+//paste - fires event when user pastes text or command-v
+task.addEventListener('paste', runEvent);
+
 
 
 function runEvent(e) {
