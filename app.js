@@ -14,7 +14,11 @@ taskInput.value = '';
 // taskInput.addEventListener('keyup', runEvent);
 
 // Keypress
-task.addEventListener('keypress', runEvent);
+// task.addEventListener('keypress', runEvent);
+
+// focus - when you click inside of an input and you set it to the focus mode
+task.addEventListener('focus', runEvent);
+
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
