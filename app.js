@@ -25,10 +25,9 @@
 document.body.addEventListener('click', deleteItem);
 
 function deleteItem(e) {
-  if (e.target.className === 'fa fa-remove') {
+  if (e.target.parentElement.className === 'delete-item') {
     console.log('delete item');
   }
 }
-//right now only the first list item console.logs delete item when you click it
-//event delegation needs to happen in order to allow each of the rest of the list items to console log delete item
-//if you dynamically insert a list item using javascript, you also need to use event delegation.
+//now wont work
+
