@@ -1,10 +1,20 @@
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 
-form.addEventListener('submit', runEvent);
+// Clear input
+taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+taskInput.addEventListener('keydown', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
 
-  e.preventDefault();
+  console.log(e.target.value); //to capture each key as it is typed
+
+  //Get input value
+  // console.log(taskInput.value);
+
+  // e.preventDefault();
 }
