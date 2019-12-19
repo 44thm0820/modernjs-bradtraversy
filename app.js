@@ -32,15 +32,15 @@ taskInput.value = '';
 //input - fires event when any edit happens, ie cut or paste,
 // task.addEventListener('input', runEvent);
 
-//demonstrating the select list
+//demonstrating the select list - need to disable materialize so you can see select elements
 //Change
-select.addEventListener('change', runEvent);
+// select.addEventListener('change', runEvent);
 
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
 
-  console.log(e.target.value);
+  // console.log(e.target.value);
 
   // heading.innerText = e.target.value; //now the heading will include whatever i type.
 
