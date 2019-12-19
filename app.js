@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select')
 
 // Clear input
 taskInput.value = '';
@@ -26,14 +27,20 @@ taskInput.value = '';
 // task.addEventListener('cut', runEvent);
 
 //paste - fires event when user pastes text or command-v
-task.addEventListener('paste', runEvent);
+// task.addEventListener('paste', runEvent);
 
+//input - fires event when any edit happens, ie cut or paste,
+// task.addEventListener('input', runEvent);
+
+//demonstrating the select list
+//Change
+select.addEventListener('change', runEvent);
 
 
 function runEvent(e) {
   console.log(`EVENT TYPE:${e.type}`);
 
-  // console.log(e.target.value); //to capture each key as it is typed
+  console.log(e.target.value);
 
   // heading.innerText = e.target.value; //now the heading will include whatever i type.
 
