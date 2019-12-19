@@ -25,9 +25,9 @@
 document.body.addEventListener('click', deleteItem);
 
 function deleteItem(e) {
-  if (e.target.parentElement.className === 'delete-item') {
+  if (e.target.parentElement.className === 'delete-item secondary-content') {
     console.log('delete item');
   }
 }
-//now wont work
+//now will work, but it is not a great way to do it, because if you want to later add a new class to the element and save, the last one will not work
 
