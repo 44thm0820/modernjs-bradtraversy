@@ -31,4 +31,6 @@ card.addEventListener('mousemove', runEvent);
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
   heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 }
+
