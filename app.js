@@ -38,3 +38,10 @@ document.querySelector('form').addEventListener('submit', function(e){
 
   e.preventDefault();
 });
+
+const tasks = JSON.parse(localStorage.getItem('tasks'));
+//transforming string back into an array so we can use forEach to print each element to console
+
+tasks.forEach(function(task) {
+  console.log(task)
+});
