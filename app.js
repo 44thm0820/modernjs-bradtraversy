@@ -30,6 +30,7 @@ function deleteItem(e) {
     e.target.parentElement.parentElement.remove();
   }
 }
+
 //now will work - .contains is a method of DOMTokenList
 //though it is not a method of JavaScript arrays
 // https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains
