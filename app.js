@@ -1,36 +1,7 @@
-// // EVENT BUBBLING
+// set local storage item
+localStorage.setItem('name', 'John');
 
-// document.querySelector('.card-title').addEventListener('click', function(){
-//   console.log('card title');
-// })
+// set session storage item
+sessionStorage.setItem('name', 'Beth');
 
-// document.querySelector('.card-content').addEventListener('click', function(){
-//   console.log('card content');
-// })
 
-// document.querySelector('.card').addEventListener('click', function(){
-//   console.log('card');
-// })
-
-// document.querySelector('.col').addEventListener('click', function(){
-//   console.log('col');
-// })
-
-//EVENT DELEGATION
-
-// const delItem = document.querySelector('.delete-item');
-
-// delItem.addEventListener('click', deleteItem);
-
-document.body.addEventListener('click', deleteItem);
-
-function deleteItem(e) {
-  if (e.target.parentElement.classList.contains('delete-item') ) {
-    console.log('delete item');
-    e.target.parentElement.parentElement.remove();
-  }
-}
-
-//now will work - .contains is a method of DOMTokenList
-//though it is not a method of JavaScript arrays
-// https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains
