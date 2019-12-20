@@ -25,9 +25,11 @@
 document.body.addEventListener('click', deleteItem);
 
 function deleteItem(e) {
-  if (e.target.parentElement.className === 'delete-item secondary-content') {
+  if (e.target.parentElement.classList.contains('delete-item') ) {
     console.log('delete item');
+    e.target.parentElement.parentElement.remove();
   }
 }
-//now will work, but it is not a great way to do it, because if you want to later add a new class to the element and save, the last one will not work
-
+//now will work - .contains is a method of DOMTokenList
+//though it is not a method of JavaScript arrays
+// https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains
