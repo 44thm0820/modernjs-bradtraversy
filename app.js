@@ -10,10 +10,19 @@
 // localStorage.removeItem('name');
 
 // get from storage
-const name = localStorage.getItem('name');
-const age = localStorage.getItem('age');
+// const name = localStorage.getItem('name');
+// const age = localStorage.getItem('age');
 
-// clear local storage
-localStorage.clear();
+// // clear local storage
+// localStorage.clear();
 
-console.log(name, age); //console will display John
+// console.log(name, age); //console will display John
+
+document.querySelector('form').addEventListener('submit', function(e){
+  // console.log(123);
+  const task = document.getElementById('task').value;
+  localStorage.setItem('task', task);
+  alert('Task saved');
+
+  e.preventDefault();
+});
